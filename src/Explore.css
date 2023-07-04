@@ -1,0 +1,42 @@
+.container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+}
+
+.collection-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.collection-box {
+  width: 250px;
+  height: 300px;
+  padding: 10px;
+  background-color: #9FC2BA;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.collection-box img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.collection-box h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.collection-box p {
+  font-size: 14px;
+  color: #888;
+}

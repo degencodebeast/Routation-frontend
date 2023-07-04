@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+  }
+
+  .pages {
+    background-color: #111;
+    color: white;
+  }
+  
+  .details-page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    justify-content: center;
+    align-items: center;
+    padding: 350px;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 800px; 
+    background-color: #7CE0F9;
+    border-radius: 18px;
+    padding: 40px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); 
+    margin: 0 auto;
+  }
+  
+  .section {
+    flex-grow: 1;
+    padding: 20px;
+    
+  }
+  
+  .section h2 {
+    margin-top: 20px;
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 12px;
+    color: #141414;
+  }
+  
+  .section p {
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  
+  .upload-image-box {
+    background-color: #ffffff;
+    border: 1px solid #76808a;
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    height: 50px;
+    border-radius: 8px;
+  }
+  
+  .upload-image-box p {
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    color: #76808a;
+  }
+  
+  .details-page input[type="text"] {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px 8px;
+    gap: 8px;
+    width: 760px;
+    height: 50px;
+    border: 1px solid #76808a;
+    border-radius: 8px;
+  }
+  
+  .description-input {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px 8px;
+    gap: 8px;
+    width: 760px;
+    height: 120px;
+    border: 1px solid #76808a;
+    border-radius: 8px;
+  }
+  
+  .details-page select {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 16px 8px;
+    gap: 8px;
+    width: 760px;
+    height: 50px;
+    border: 1px solid #76808a;
+    border-radius: 8px;
+  }
+  
+  .details-page h2 {
+    margin-top: 20px;
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 12px;
+    color: #141414;
+  }
+  
+  .create-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 16px;
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(90.69deg, #2472ff -22.6%, #7e51db 86.31%);
+    border-radius: 8px;
+  }
+  
