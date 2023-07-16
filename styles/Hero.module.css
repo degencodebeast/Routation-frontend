@@ -1,0 +1,24 @@
+.hero {
+    position: relative;
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+.type-writer-text {
+    background: linear-gradient(to right, #30cfd0 0%, #330867 100%);
+    background: linear-gradient(30deg, #7c22da, var(--chakra-colors-teal-300));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.hero-inner {
+    /* margin-top: var(--navbar-height); */
+}
+@media all and (max-width: 768px) {
+    .hero-inner {
+        flex-wrap: wrap;
+    }
+}

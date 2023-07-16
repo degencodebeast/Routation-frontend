@@ -1,0 +1,101 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 1450px;
+
+    left: 50%;
+    transform: translate(-50%);
+    backdrop-filter: blur(10px);
+    z-index: 10;
+
+    /* background: linear-gradient(
+        to left,
+        #fc1e4d,
+        #7c22da,
+        #491edf,
+        #261710,
+        #4d0e93
+        ); */
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.75);
+    height: var(--navbar-height);
+}
+.navbar.dark {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.company-name {
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding-right: 1.5rem;
+    min-width: 0;
+}
+
+a.nav-link {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: inherit;
+    /* font-family: 'Comic Sans MS', cursive; */
+    background: transparent;
+}
+a.nav-link:hover {
+    background: transparent;
+    color: var(--primary-color);
+}
+.navbar-links a.nav-link-active {
+    color: var(--primary-color);
+}
+.menu-toggle {
+    display: none;
+    position: relative;
+    z-index: 10;
+}
+.connect-btn-wrap button {
+    --rk-radii-connectButton: 50px;
+    --rk-colors-accentColor: var(--chakra-colors-teal-500);
+}
+.navbar-links.open {
+    transform: translateX(0);
+    z-index: 5;
+}
+@media all and (max-width: 789px) {
+    .navbar-links {
+        flex-direction: column;
+        position: fixed;
+        height: 100vh;
+        /* min-width: 50%; */
+        min-width: 300px;
+        top: 0;
+        right: 0;
+        transition: transform 0.75s ease-out;
+        background: rgba(255, 255, 255, 0.95);
+        align-items: center;
+        justify-content: start;
+        padding-top: 4rem;
+        padding-right: unset;
+        overflow-y: auto;
+        transform: translateX(999px);
+        z-index: -2;
+        backdrop-filter: blur(15px);
+        gap: 1rem;
+    }
+    .navbar.dark .navbar-links {
+        background: rgba(0, 0, 0, 0.95);
+    }
+    .menu-toggle {
+        display: block;
+    }
+}
