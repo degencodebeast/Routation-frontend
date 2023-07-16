@@ -25,7 +25,7 @@ const Hero = () => {
             >
                 <Flex
                     // height="100%"
-                    // alignItems="center"
+                    alignItems="center"
                     justifyContent="space-around"
                     className={styles['hero-inner']}
                     px={8}
