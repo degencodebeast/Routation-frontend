@@ -28,7 +28,7 @@ function Navbar({ bg = '' }) {
                     fontSize="2xl"
                     fontWeight="bold"
                 >
-                    Cross
+                   Routation
                 </Heading>
             </Link>
             <Flex alignItems={'center'}>

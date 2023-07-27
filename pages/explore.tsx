@@ -51,7 +51,7 @@ const Explore = () => {
             </Head>
             <Navbar />
             <Box px={6} >
-                <Heading textAlign={'center'} mt={6} mb={6}>
+                <Heading textAlign={'center'} mt={9} mb={9} pt={9}>
                     Explore Collections
                 </Heading>
                 <div className={styles['collection-list']}>

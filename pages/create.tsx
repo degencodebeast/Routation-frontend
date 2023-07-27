@@ -16,6 +16,8 @@ import Footer from '../components/Footer';
 import { Web3Storage } from 'web3.storage';
 import { ChangeEvent, ChangeEventHandler, FormEvent, useState } from 'react';
 import Head from 'next/head';
+import { fantomTestnet, goerli, polygonMumbai } from 'viem/chains';
+import { writeContract } from '@wagmi/core';
 // Construct with token and endpoint
 const apiToken = process.env.NEXT_PUBLIC_WEB3_STORAGE_TOKEN as string;
 const client = new Web3Storage({ token: apiToken });
@@ -31,12 +33,46 @@ const CreatePage = () => {
         console.log({ hasImage });
         setFiles(files);
     }
+    
     async function handleFormSubmit(evt: FormEvent<HTMLDivElement>) {
         evt.preventDefault();
 
         try {
             const cid = await client.put(files, { name: fields.name });
             console.log({ cid });
+            // if(fields.blockchain === 'fantom') {
+
+        //   const { hash } = await writeContract({
+        //     address: '0xCAMPAIGN_MANAGER',
+        //     abi: [],
+        //     chain: fantomTestnet,
+        //     functionName: "createCampaign",
+        //     args: [cid],
+        //   });
+    
+        //     }
+        //     else if(fields.blockchain === 'mumbai') {
+
+        //         const { hash } = await writeContract({
+        //             address: '0xCAMPAIGN_MANAGER',
+        //             abi: [],
+        //           chain: polygonMumbai,
+        //           functionName: "createCampaign",
+        //           args: [cid],
+        //         });
+          
+        //           }
+        //     else if(fields.blockchain === 'goerli') {
+
+        //             const { hash } = await writeContract({
+        //                 address: '0xCAMPAIGN_MANAGER',
+        //                 abi: [],
+        //               chain: goerli,
+        //               functionName: "createCampaign",
+        //               args: [cid],
+        //             });
+              
+        //               }
         } catch (error) {
             console.log('error', error);
         }
@@ -51,6 +87,7 @@ const CreatePage = () => {
         setFields((prev) => ({ ...prev, [name]: value }));
         console.log(fields);
     }
+    const defaultValue = "Select chain";
     return (
         <div className="page">
             <Head>
@@ -134,13 +171,12 @@ const CreatePage = () => {
                         name="blockchain"
                         minH={12}
                         _focus={{ borderColor: 'teal.600' }}
-                        id="blockchain-inp"
+                        defaultValue={defaultValue}
                     >
-                        <option disabled selected>
-                            Select Chain
-                        </option>
-                        <option>opt 1</option>
-                        <option>opt 2</option>
+                        
+                        <option>Mumbai</option>
+                        <option>Fantom</option>
+                        <option>Goerli</option>
                     </Select>
                     <Button
                         type="submit"

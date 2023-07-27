@@ -35,7 +35,7 @@ const Footer = () => {
                         </Heading>
                         <Text mt={8} mb={8} maxW={250}>
                             Create, sell and collect truly rare digital
-                            artworks. Powered by Axelar.
+                            artworks. Powered by Router-Protocol.
                         </Text>
                     </Box>
                     <Box className="subscribe-form">
